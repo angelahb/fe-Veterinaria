@@ -1,0 +1,79 @@
+<div class="container mt-5 pb-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+
+            <span class="titulo">Editar Cliente</span>
+                <form class="mt-3" [formGroup]="clienteForm" (ngSubmit)="editarCliente()">
+
+                    <mat-dialog-content>
+                        <table class="example-full-width" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <mat-form-field class="example-full-width" appearance="fill" hintLabel="Max 100 characters">
+                                        <mat-label>Nombre Cliente</mat-label>
+                                        <input matInput formControlName="nombre" maxlength="100">
+                                        <mat-error *ngIf="clienteForm.get('nombre')?.hasError('required') && clienteForm.get('nombre')?.touched">El Nombre es Obligatorio</mat-error>
+                                    </mat-form-field>
+                                </td>
+                                <td>
+                                    <mat-form-field class="example-full-width" appearance="fill" hintLabel="Max 100 characters">
+                                        <mat-label>Apellido Paterno</mat-label>
+                                        <input matInput formControlName="appPaterno" maxlength="100">
+                                        <mat-error *ngIf="clienteForm.get('appPaterno')?.hasError('required') && clienteForm.get('appPaterno')?.touched">El Apellido Paterno es Obligatorio</mat-error>
+                                    </mat-form-field>
+                                </td>
+                             </tr>
+                        </table>
+
+                        <table class="example-full-width" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <mat-form-field class="example-full-width" appearance="fill" hintLabel="Max 100 characters">
+                                        <mat-label>Apellido Materno</mat-label>
+                                        <input matInput formControlName="appMaterno" maxlength="100">
+                                        <mat-error *ngIf="clienteForm.get('appMaterno')?.hasError('required') && clienteForm.get('appMaterno')?.touched">El Apellido Materno es Obligatorio</mat-error>
+                                    </mat-form-field>
+                                </td>
+                                <td>
+                                    <mat-form-field class="example-full-width" appearance="fill" hintLabel="Max 9 characters">
+                                        <mat-label>Teléfono</mat-label>
+                                        <input matInput formControlName="telefono" maxlength="9">
+                                        <mat-error *ngIf="clienteForm.get('telefono')?.hasError('required') && clienteForm.get('telefono')?.touched">El Teléfono es Obligatorio</mat-error>
+                                    </mat-form-field>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="example-full-width" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <mat-form-field class="example-full-width" appearance="fill" hintLabel="Max 100 characters">
+                                        <mat-label>Dirección</mat-label>
+                                        <input matInput formControlName="direccion" maxlength="100">
+                                        <mat-error *ngIf="clienteForm.get('direccion')?.hasError('required') && clienteForm.get('direccion')?.touched">La Dirección es Obligatoria</mat-error>
+                                    </mat-form-field>
+                                </td>
+                                <td> 
+                                    <mat-form-field class="example-full-width" appearance="fill" hintLabel="Max 30 characters">
+                                        <mat-label>Comuna</mat-label>
+                                        <input matInput formControlName="comuna" maxlength="30">
+                                        <mat-error *ngIf="clienteForm.get('comuna')?.hasError('required') && clienteForm.get('comuna')?.touched">La Comuna es Obligatoria</mat-error>
+                                    </mat-form-field>
+                                </td>
+                            </tr>
+                        </table>
+                    </mat-dialog-content>
+
+                    <mat-dialog-actions align="end">
+                        <button mat-mini-fab color="accent" routerLink="/cliente" class="float-start"><mat-icon>subdirectory_arrow_left</mat-icon></button>
+                        <button type="submit" mat-stroked-button color="accent" [disabled]="clienteForm.invalid" class="float-end">Grabar</button>
+                    </mat-dialog-actions>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

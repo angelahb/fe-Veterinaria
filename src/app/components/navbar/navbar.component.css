@@ -1,0 +1,12 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.inicio{
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.letraMenu{
+  font-size: 1.2rem;
+}

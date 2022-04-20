@@ -1,0 +1,7 @@
+<div mat-dialog-content>
+    <h3><strong>{{mensaje}}</strong></h3>
+</div>
+<div mat-dialog-actions>
+    <button mat-stroked-button color="accent" (click)="confirmado()" >Si</button>
+    <button mat-stroked-button (click)="cerrarDialogo()" cdkFocusInitial>No</button>
+</div>
